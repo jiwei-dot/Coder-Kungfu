@@ -56,7 +56,7 @@ private:
 
  private:
   // 00010000 & 00001111 = 0
-  static_assert(((Capacity >= 2) && (Capacity & (Capacity - 1) == 0)),
+  static_assert(((Capacity >= 2) && ((Capacity & (Capacity - 1)) == 0)),
                 "Capacity must be power of two and at least two");
   alignas(64) std::atomic<size_t> write_idx_{0};
   alignas(64) std::atomic<size_t> read_idx_{0};

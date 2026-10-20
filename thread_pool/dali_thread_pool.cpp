@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #include <sys/sysinfo.h>
+#include <stdexcept>
 #include "dali_thread_pool.hpp"
 
 namespace dali
